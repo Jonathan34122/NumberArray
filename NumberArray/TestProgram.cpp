@@ -1,0 +1,21 @@
+#include <iostream>
+#include <random>
+#include "NumberArray.h"
+
+using namespace std;
+
+int main() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
