@@ -6,7 +6,7 @@ class NumberArray {
 private:
 
 	int size;
-	double* data;
+	double* data; // point to the array val
 
 	static const int maxSize = 10; // max size is a shared constant variable. size of 10 elements.
 
@@ -22,7 +22,7 @@ public:
 
 	// ------ Getter
 
-	double getNumber(int index, double value) const;
+	double getNumber(int index) const;
 	double getMinimum() const;
 	double getMaximum() const;
 	double getAverage() const;
