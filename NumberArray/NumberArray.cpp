@@ -88,7 +88,7 @@ using namespace std;
 
 	void NumberArray::print() const {
 		for (int i = 0; i < size; i++) {
-			cout << data[i] << " ";
+			cout << data[i] << ", ";
 		}
 		cout << endl;
 	}
@@ -97,6 +97,9 @@ using namespace std;
 
 	NumberArray::~NumberArray() {
 		delete[] data;
+		static int counter = 1; // count how many times destructor is called. static to persist in a function.
+		
+		cout << "Destructor called, array deleted from heap x" << counter << endl;
 
-		cout << "Destructor called, memory deleted from heap";
+		counter++;
 	}
