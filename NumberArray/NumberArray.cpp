@@ -9,7 +9,7 @@ using namespace std;
 	// ------- Constructor
 
 	NumberArray::NumberArray(int size) {
-		
+
 		if (size <= 0 || size > maxSize) { // Validation, no int <= 0 or greater than max size.
 			this->size = maxSize; // Default to max size.
 		}
@@ -18,11 +18,16 @@ using namespace std;
 		}
 		
 
-		data = new double[size]; // allocated to heap
+		data = new double[this->size]; // allocated to heap
 
-		for (int i = 0; i < size; i++) {
+		for (int i = 0; i < this-> size; i++) {
 			data[i] = 0;
 		}
+		
+		static int counter = 1;
+
+		cout << "\nConstructor called, new object created x" << counter << endl << endl;;
+		counter++;
 
 	}
 
@@ -61,6 +66,7 @@ using namespace std;
 			}
 		}
 		return minimum;
+		cout << endl;
 	}
 
 	double NumberArray::getMaximum() const {
@@ -73,6 +79,7 @@ using namespace std;
 			}
 		}
 		return maximum;
+		cout << endl;
 	}
 
 	double NumberArray::getAverage() const {
@@ -82,6 +89,7 @@ using namespace std;
 			sum += data[i];
 		}
 		return sum / size;
+		cout << endl;
 	}
 
 	// -------- Print
@@ -99,7 +107,7 @@ using namespace std;
 		delete[] data;
 		static int counter = 1; // count how many times destructor is called. static to persist in a function.
 		
-		cout << "Destructor called, array deleted from heap x" << counter << endl;
+		cout << "\nDestructor called, array deleted from heap x" << counter << endl;
 
 		counter++;
 	}
