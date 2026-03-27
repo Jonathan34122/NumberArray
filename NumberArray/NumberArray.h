@@ -8,7 +8,7 @@ private:
 	int size;
 	double* data;
 
-	static const int maxSize = 10; // max size is a shared constant variable.
+	static const int maxSize = 10; // max size is a shared constant variable. size of 10 elements.
 
 public:
 
@@ -19,6 +19,17 @@ public:
 	// ----- Setter
 
 	void setNumber(int index, double value);
+
+	// ------ Getter
+
+	double getNumber(int index, double value) const;
+	double getMinimum() const;
+	double getMaximum() const;
+	double getAverage() const;
+
+	// ---- Print
+
+	void print() const;
 
 	// ----- Destructor
 
