@@ -49,4 +49,11 @@ int main() {
 	cout << "Number at given index: " << array1.getNumber(2) << endl;
 	cout << "Average: " << array1.getAverage() << endl;
 
+	cout << "\nCopy Constructor:\n";
+
+	NumberArray array2(array1);
+
+	array1.print();
+	array2.print();
+
 }
