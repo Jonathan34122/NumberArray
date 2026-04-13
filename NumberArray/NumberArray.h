@@ -16,6 +16,12 @@ public:
 
 	NumberArray(int size = maxSize);
 
+	// = Op Overload
+
+	NumberArray(const NumberArray& other);
+	NumberArray& operator=(const NumberArray& other);
+
+
 	// ----- Setter
 
 	void setNumber(int index, double value);
