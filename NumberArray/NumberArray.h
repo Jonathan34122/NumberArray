@@ -16,7 +16,7 @@ public:
 
 	NumberArray(int size = maxSize);
 
-	// = Op Overload
+	// = Op Overload Initialize
 
 	NumberArray(const NumberArray& other);
 	NumberArray& operator=(const NumberArray& other);

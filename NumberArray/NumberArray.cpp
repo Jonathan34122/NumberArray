@@ -31,6 +31,39 @@ using namespace std;
 
 	}
 
+	// ------- Copy Constructor
+
+	NumberArray::NumberArray(const NumberArray& other) {
+
+		size = other.size;
+
+		data = new double[size];
+
+		for (int i = 0; i < size; i++) {
+			data[i] = other.data[i];
+		}
+
+	}
+	// ------- Assignment Op Define
+
+	NumberArray& NumberArray::operator=(const NumberArray& other) {
+
+		if (this == &other) {
+			return *this;
+		}
+
+		delete[] data;
+
+		size = other.size;
+
+		data = new double[size];
+
+		for (int i = 0; i < size; i++) {
+			data[i] = other.data[i];
+		}
+		return *this;
+	}
+
 	// --------- Setter
 
 	void NumberArray::setNumber(int index, double value) {
