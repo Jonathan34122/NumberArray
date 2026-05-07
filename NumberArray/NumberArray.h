@@ -115,9 +115,56 @@ public:
 	}
 
 
-	T getMinimum() const;
-	T getMaximum() const;
-	T getAverage() const;
+	T getMinimum() const {
+
+		T minimum = data[0];
+
+		for (int i = 1; i < size; i++) {
+
+			if (data[i] < minimum) {
+
+				minimum = data[i];
+
+			}
+
+		}
+
+		return minimum;
+
+	}
+
+
+	T getMaximum() const {
+
+		T maximum = data[0];
+
+		for (int i = 1; i < size; i++) {
+
+			if (data[i] > maximum) {
+
+				maximum = data[i];
+
+			}
+
+		}
+
+		return maximum;
+
+	}
+
+	T getAverage() const {
+
+		double sum = 0;
+
+		for (int i = 0; i < size; i++) {
+
+			sum += data[i];
+
+		}
+
+		return sum / size;
+
+	}
 
 	// ---- Print
 
