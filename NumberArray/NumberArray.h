@@ -4,6 +4,7 @@
 #include <iostream>
 #include <stdexcept>
 
+using namespace std;
 
 template <typename T>
 class NumberArray {
@@ -55,7 +56,7 @@ public:
 
 		}
 
-		cout << "Copy Constructor Called"
+		cout << "Copy Constructor Called";
 
 	}
 
