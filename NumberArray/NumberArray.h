@@ -12,7 +12,7 @@ class NumberArray {
 private:
 
 	int size;
-	double* data; // point to the array val
+	T* data; // point to the array val
 
 	static const int maxSize = 10; // max size is a shared constant variable. size of 10 elements.
 
