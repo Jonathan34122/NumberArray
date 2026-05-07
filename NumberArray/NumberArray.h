@@ -181,7 +181,13 @@ public:
 
 	// ----- Destructor
 
-	~NumberArray();
+	~NumberArray() {
+
+		delete[] data;
+
+		cout << "Destructor Called!";
+
+	}
 
 };
 
