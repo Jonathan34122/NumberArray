@@ -168,7 +168,16 @@ public:
 
 	// ---- Print
 
-	void print() const;
+	void print() const {
+
+		for (int i = 0; i < size; i++) {
+
+			cout << data[i] << ", ";
+		}
+
+		cout << endl;
+
+	}
 
 	// ----- Destructor
 
