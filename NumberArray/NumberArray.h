@@ -88,14 +88,36 @@ public:
 
 	// ----- Setter
 
-	void setNumber(int index, double value);
+	void setNumber(int index, T value) {
+
+		if (index < 0 || index >= size) {
+
+			throw out_of_range("Index Out of Bounds");
+
+		}
+
+		data[index] = value;
+
+	}
 
 	// ------ Getter
 
-	double getNumber(int index) const;
-	double getMinimum() const;
-	double getMaximum() const;
-	double getAverage() const;
+	T getNumber(int index) const {
+
+		if (index < 0 || index >= size) {
+
+			throw out_of_range("Invalid Range!");
+
+		}
+
+		return data[index];
+
+	}
+
+
+	T getMinimum() const;
+	T getMaximum() const;
+	T getAverage() const;
 
 	// ---- Print
 
